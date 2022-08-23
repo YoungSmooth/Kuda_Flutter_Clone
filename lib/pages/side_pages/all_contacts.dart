@@ -17,7 +17,9 @@ class AllContacts extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 25,
-              child: Image.asset(contactImage),
+              backgroundImage: NetworkImage(
+                contactImage,
+              ),
             ),
             Container(
               color: Colors.green,

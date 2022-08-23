@@ -2,8 +2,56 @@ import 'package:flutter/material.dart';
 import 'package:kuda/pages/colors/colors.dart';
 import 'package:kuda/pages/side_pages/all_contacts.dart';
 
-class PaymentsPage extends StatelessWidget {
+class PaymentsPage extends StatefulWidget {
   const PaymentsPage({Key? key}) : super(key: key);
+
+  @override
+  State<PaymentsPage> createState() => _PaymentsPageState();
+}
+
+class _PaymentsPageState extends State<PaymentsPage> {
+  final List contactsFromPhone = [
+    [
+      'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY2MzU3OTcxMTUwODQxNTM1/steve-jobs--david-paul-morrisbloomberg-via-getty-images.jpg',
+      'Ngozi Nwachukwuma'
+    ],
+    [
+      'https://i.insider.com/62d80273bc4c770018b7862b?width=700',
+      'Elon Nwokeomalina'
+    ],
+    [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Frank_Jude.jpg/220px-Frank_Jude.jpg',
+      'Ambrose Alina'
+    ],
+    [
+      'https://media.glamour.com/photos/62e95e61d8c5f9a4e5a6bcc5/master/w_2560%2Cc_limit/847072750',
+      'Angelina Allwell'
+    ],
+    [
+      'https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Top_Gun_Maverick_Poster.jpg/220px-Top_Gun_Maverick_Poster.jpg',
+      'Regina Daniels'
+    ],
+    [
+      'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY2MzU3OTcxMTUwODQxNTM1/steve-jobs--david-paul-morrisbloomberg-via-getty-images.jpg',
+      'Ngozi Nwachukwuma'
+    ],
+    [
+      'https://i.insider.com/62d80273bc4c770018b7862b?width=700',
+      'Elon Nwokeomalina'
+    ],
+    [
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Frank_Jude.jpg/220px-Frank_Jude.jpg',
+      'Ambrose Alina'
+    ],
+    [
+      'https://media.glamour.com/photos/62e95e61d8c5f9a4e5a6bcc5/master/w_2560%2Cc_limit/847072750',
+      'Angelina Allwell'
+    ],
+    [
+      'https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Top_Gun_Maverick_Poster.jpg/220px-Top_Gun_Maverick_Poster.jpg',
+      'Regina Daniels'
+    ],
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -54,11 +102,11 @@ class PaymentsPage extends StatelessWidget {
               color: Colors.red,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  // itemCount: 5,
+                  itemCount: contactsFromPhone.length,
                   itemBuilder: ((context, index) {
                     return AllContacts(
-                      contactImage: 'lib/icons/apple.png',
-                      contactName: 'Hadassah Nafo Legior',
+                      contactImage: contactsFromPhone[index][0],
+                      contactName: contactsFromPhone[index][1],
                     );
                   })),
             ),
