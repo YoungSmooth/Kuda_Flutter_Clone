@@ -1,2 +1,2 @@
 # Kuda_Flutter_Clone
-Flutter clone for African banking app Kuda
+Flutter clone for financial/banking app Kuda
