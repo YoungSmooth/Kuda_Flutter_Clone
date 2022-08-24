@@ -291,7 +291,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              HomePageNotification(),
+              // notification
+              const HomePageNotification(),
+              // recent transactions
               Container(
                 padding: const EdgeInsets.only(left: 13),
                 child: const Text(
@@ -318,7 +320,6 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
-
               // BottomNavigationBar
             ],
           ),

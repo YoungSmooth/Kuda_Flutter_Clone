@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kuda/pages/colors/colors.dart';
+import 'package:kuda/pages/payment_options.dart';
 import 'package:kuda/pages/side_pages/all_contacts.dart';
 
 class PaymentsPage extends StatefulWidget {
@@ -71,46 +72,46 @@ class _PaymentsPageState extends State<PaymentsPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: const [
-                CircleAvatar(
-                  backgroundColor: kudaColor,
-                  radius: 5,
-                  child: Icon(
-                    Icons.abc,
-                    size: 10,
-                    color: Colors.white,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            verticalDirection: VerticalDirection.down,
+            children: [
+              Row(
+                children: const [
+                  CircleAvatar(
+                    backgroundColor: kudaColor,
+                    radius: 5,
+                    backgroundImage: NetworkImage(
+                        'https://play-lh.googleusercontent.com/C7ojJSQlm0ae8xRxH7kiET-PxIHSZfk2BQ8-ipu0H7EiUnIcgpgDmHLVfZyIEj7wzxrY'),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 8.0),
-                  child: Text(
-                    'Friends on Kuda',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold),
+                  Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Text(
+                      'Friends on Kuda',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            Container(
-              height: 100,
-              color: Colors.red,
-              child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: contactsFromPhone.length,
-                  itemBuilder: ((context, index) {
-                    return AllContacts(
-                      contactImage: contactsFromPhone[index][0],
-                      contactName: contactsFromPhone[index][1],
-                    );
-                  })),
-            ),
-          ],
+                ],
+              ),
+              Container(
+                height: 100,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: contactsFromPhone.length,
+                    itemBuilder: ((context, index) {
+                      return AllContacts(
+                        contactImage: contactsFromPhone[index][0],
+                        contactName: contactsFromPhone[index][1],
+                      );
+                    })),
+              ),
+              const PaymentOptions(),
+            ],
+          ),
         ),
       ),
     );
