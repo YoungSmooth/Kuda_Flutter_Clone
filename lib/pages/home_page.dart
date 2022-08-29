@@ -65,264 +65,262 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 40,
-              ),
-              // Intro
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Row(
-                      children: const <Widget>[
-                        Padding(
-                          padding: EdgeInsets.only(left: 5),
+      body: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 40,
+            ),
+            // Intro
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Row(
+                    children: const <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: CircleAvatar(
+                          radius: 17,
+                          backgroundImage: NetworkImage(
+                            'https://i.pinimg.com/564x/fd/3a/41/fd3a41fe902856e6cf87e902118d32a4.jpg',
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 19),
+                        child: Text(
+                          'Hi, Onyekachi',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontStyle: FontStyle.normal),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Add Money',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Color.fromARGB(255, 77, 40, 143),
+                              fontStyle: FontStyle.normal),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 5.0),
+                        child: CircleAvatar(
+                          radius: 15,
+                          backgroundColor: kudaColor,
                           child: CircleAvatar(
-                            radius: 17,
-                            backgroundImage: NetworkImage(
-                              'https://i.pinimg.com/564x/fd/3a/41/fd3a41fe902856e6cf87e902118d32a4.jpg',
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 19),
-                          child: Text(
-                            'Hi, Onyekachi',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w900,
-                                fontSize: 16,
-                                color: Colors.black,
-                                fontStyle: FontStyle.normal),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: <Widget>[
-                        const Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: Text(
-                            'Add Money',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Color.fromARGB(255, 77, 40, 143),
-                                fontStyle: FontStyle.normal),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 5.0),
-                          child: CircleAvatar(
-                            radius: 15,
-                            backgroundColor: kudaColor,
-                            child: CircleAvatar(
-                              radius: 14,
-                              backgroundColor: Colors.white,
-                              child: Container(
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: kudaColor,
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.all(1),
-                                  child: Icon(
-                                    size: 17,
-                                    Icons.add,
-                                    color: Colors.white,
-                                  ),
+                            radius: 14,
+                            backgroundColor: Colors.white,
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: kudaColor,
+                              ),
+                              child: const Padding(
+                                padding: EdgeInsets.all(1),
+                                child: Icon(
+                                  size: 17,
+                                  Icons.add,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
                           ),
-                        )
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 2,
+            ),
+
+            // Account Balance
+            Padding(
+              padding: const EdgeInsets.all(13.0),
+              child: Container(
+                height: 160,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(11),
+                  ),
+                  color: kudaColor,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 20),
+                      child: Text(
+                        'Account Balance',
+                        style: TextStyle(
+                            color: Colors.white54,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 11),
+                      child: Text(
+                        '₦92,000,000.00',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 33,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                    // Spend, Save and Borrow
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                height: 25,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                    color: Colors.blueGrey.shade100,
+                                    borderRadius: BorderRadius.circular(5)),
+                                child: const Icon(
+                                  Icons.mark_chat_read_rounded,
+                                  color: Colors.deepPurpleAccent,
+                                  size: 16,
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.only(top: 8),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5)),
+                                child: const Text(
+                                  'Spend',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        // Save
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                height: 25,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                    color: tripleLight,
+                                    borderRadius: BorderRadius.circular(5)),
+                                child: const Icon(
+                                  Icons.file_copy,
+                                  color: Colors.deepPurpleAccent,
+                                  size: 16,
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.only(top: 8),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5)),
+                                child: const Text(
+                                  'Save',
+                                  style: TextStyle(
+                                      color: Colors.white24, fontSize: 14),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        // Borrow
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                height: 25,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                    color: tripleLight,
+                                    borderRadius: BorderRadius.circular(5)),
+                                child: const Icon(
+                                  Icons.menu_book_outlined,
+                                  color: Colors.deepPurpleAccent,
+                                  size: 16,
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.only(top: 8),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5)),
+                                child: const Text(
+                                  'Borrow',
+                                  style: TextStyle(
+                                    color: Colors.white24,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 2,
+            ),
+            // notification
+            const HomePageNotification(),
+            // recent transactions
+            Container(
+              padding: const EdgeInsets.only(left: 13),
+              child: const Text(
+                'Recent Transactions',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
               ),
-
-              // Account Balance
-              Padding(
-                padding: const EdgeInsets.all(13.0),
-                child: Container(
-                  height: 160,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(11),
-                    ),
-                    color: kudaColor,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(top: 20),
-                        child: Text(
-                          'Account Balance',
-                          style: TextStyle(
-                              color: Colors.white54,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 11),
-                        child: Text(
-                          '₦92,000,000.00',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 33,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                      // Spend, Save and Borrow
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 12),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Container(
-                                  height: 25,
-                                  width: 35,
-                                  decoration: BoxDecoration(
-                                      color: Colors.blueGrey.shade100,
-                                      borderRadius: BorderRadius.circular(5)),
-                                  child: const Icon(
-                                    Icons.mark_chat_read_rounded,
-                                    color: Colors.deepPurpleAccent,
-                                    size: 16,
-                                  ),
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.only(top: 8),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5)),
-                                  child: const Text(
-                                    'Spend',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 14),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          // Save
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 12),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Container(
-                                  height: 25,
-                                  width: 35,
-                                  decoration: BoxDecoration(
-                                      color: tripleLight,
-                                      borderRadius: BorderRadius.circular(5)),
-                                  child: const Icon(
-                                    Icons.file_copy,
-                                    color: Colors.deepPurpleAccent,
-                                    size: 16,
-                                  ),
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.only(top: 8),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5)),
-                                  child: const Text(
-                                    'Save',
-                                    style: TextStyle(
-                                        color: Colors.white24, fontSize: 14),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          // Borrow
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 12),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Container(
-                                  height: 25,
-                                  width: 35,
-                                  decoration: BoxDecoration(
-                                      color: tripleLight,
-                                      borderRadius: BorderRadius.circular(5)),
-                                  child: const Icon(
-                                    Icons.menu_book_outlined,
-                                    color: Colors.deepPurpleAccent,
-                                    size: 16,
-                                  ),
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.only(top: 8),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5)),
-                                  child: const Text(
-                                    'Borrow',
-                                    style: TextStyle(
-                                      color: Colors.white24,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
+            ),
+            const SizedBox(
+              height: 1,
+            ),
+            Container(
+              height: 295,
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: transactions.length,
+                itemBuilder: (context, index) {
+                  return RecentTransactions(
+                    transactionDate: transactions[index][0],
+                    transactionLogo: transactions[index][1],
+                    customerName: transactions[index][2],
+                    transactionAmount: transactions[index][4],
+                    transactionTime: transactions[index][3],
+                  );
+                },
               ),
-              // notification
-              const HomePageNotification(),
-              // recent transactions
-              Container(
-                padding: const EdgeInsets.only(left: 13),
-                child: const Text(
-                  'Recent Transactions',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-                ),
-              ),
-              const SizedBox(
-                height: 1,
-              ),
-              Container(
-                height: 295,
-                child: ListView.builder(
-                  scrollDirection: Axis.vertical,
-                  itemCount: transactions.length,
-                  itemBuilder: (context, index) {
-                    return RecentTransactions(
-                      transactionDate: transactions[index][0],
-                      transactionLogo: transactions[index][1],
-                      customerName: transactions[index][2],
-                      transactionAmount: transactions[index][4],
-                      transactionTime: transactions[index][3],
-                    );
-                  },
-                ),
-              ),
-              // BottomNavigationBar
-            ],
-          ),
+            ),
+            // BottomNavigationBar
+          ],
         ),
       ),
     );

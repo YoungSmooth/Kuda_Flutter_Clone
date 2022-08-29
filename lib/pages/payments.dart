@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kuda/pages/colors/colors.dart';
+import 'package:kuda/pages/payment_beneficiary.dart';
 import 'package:kuda/pages/payment_options.dart';
 import 'package:kuda/pages/side_pages/all_contacts.dart';
 
@@ -54,6 +55,15 @@ class _PaymentsPageState extends State<PaymentsPage> {
     ],
   ];
 
+  final List beneficiaries = [
+    ['Johnson Smith', 'Kuda', 123209987, '⭐'],
+    ['Kenneth Nworie', 'Stanbic IBTC', 00349982, ' '],
+    ['Agnes Okoro', 'WEMA', 222399033, '⭐'],
+    ['Joy Dike', 'First Bank', 10000209987, '⭐'],
+    ['Pauline Emmanuel', 'Access Bank', 000099551, '⭐'],
+    ['Chukwu Humphrey', 'Access Bank', 000099551, '⭐'],
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +81,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
         elevation: 0.2,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -110,6 +120,19 @@ class _PaymentsPageState extends State<PaymentsPage> {
                     })),
               ),
               const PaymentOptions(),
+              Container(
+                height: 340,
+                child: ListView.builder(
+                  itemCount: beneficiaries.length,
+                  itemBuilder: (context, index) {
+                    return PaymentBeneficiaries(
+                        beneficiaryName: beneficiaries[index][0],
+                        beneficiaryBank: beneficiaries[index][1],
+                        beneficiaryAccNo: beneficiaries[index][2],
+                        beneficiaryRating: beneficiaries[index][3]);
+                  },
+                ),
+              ),
             ],
           ),
         ),

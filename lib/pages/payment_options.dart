@@ -94,7 +94,7 @@ class PaymentOptions extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 4),
           child: Container(
-            height: 65,
+            height: 68,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
@@ -125,7 +125,7 @@ class PaymentOptions extends StatelessWidget {
                               width: 1,
                             )),
                         child: const Icon(
-                          Icons.send_sharp,
+                          Icons.phone_android_outlined,
                           color: kudaColor,
                           size: 14,
                         ),
@@ -137,7 +137,7 @@ class PaymentOptions extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Send Money',
+                            'Buy Airtime',
                             style: TextStyle(
                                 color: kudaColor,
                                 fontWeight: FontWeight.bold,
@@ -146,7 +146,7 @@ class PaymentOptions extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.only(top: 3),
                             child: Text(
-                              'Free transfers to all banks',
+                              'Recharge any phone easily',
                               style: TextStyle(
                                   color: Colors.grey.shade400, fontSize: 12),
                             ),
@@ -155,7 +155,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 70),
+                      padding: const EdgeInsets.only(left: 68),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -177,7 +177,7 @@ class PaymentOptions extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 4),
           child: Container(
-            height: 65,
+            height: 68,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
@@ -208,7 +208,7 @@ class PaymentOptions extends StatelessWidget {
                               width: 1,
                             )),
                         child: const Icon(
-                          Icons.send_sharp,
+                          Icons.app_registration,
                           color: kudaColor,
                           size: 14,
                         ),
@@ -220,7 +220,7 @@ class PaymentOptions extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Send Money',
+                            'Pay A Bill',
                             style: TextStyle(
                                 color: kudaColor,
                                 fontWeight: FontWeight.bold,
@@ -229,7 +229,7 @@ class PaymentOptions extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.only(top: 3),
                             child: Text(
-                              'Free transfers to all banks',
+                              'Take care of your essentials',
                               style: TextStyle(
                                   color: Colors.grey.shade400, fontSize: 12),
                             ),
@@ -238,7 +238,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 70),
+                      padding: const EdgeInsets.only(left: 62),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -260,7 +260,7 @@ class PaymentOptions extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 4),
           child: Container(
-            height: 65,
+            height: 68,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
@@ -291,7 +291,7 @@ class PaymentOptions extends StatelessWidget {
                               width: 1,
                             )),
                         child: const Icon(
-                          Icons.send_sharp,
+                          Icons.card_giftcard,
                           color: kudaColor,
                           size: 14,
                         ),
@@ -303,7 +303,7 @@ class PaymentOptions extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Send Money',
+                            'Gift Cards',
                             style: TextStyle(
                                 color: kudaColor,
                                 fontWeight: FontWeight.bold,
@@ -312,7 +312,7 @@ class PaymentOptions extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.only(top: 3),
                             child: Text(
-                              'Free transfers to all banks',
+                              'Spend at global brands',
                               style: TextStyle(
                                   color: Colors.grey.shade400, fontSize: 12),
                             ),
@@ -321,7 +321,26 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 70),
+                      padding: const EdgeInsets.only(left: 35.0),
+                      child: Container(
+                        height: 18,
+                        width: 42,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Colors.green),
+                        child: const Center(
+                          child: Text(
+                            'NEW!',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -343,7 +362,7 @@ class PaymentOptions extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 4),
           child: Container(
-            height: 65,
+            height: 68,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
@@ -374,7 +393,7 @@ class PaymentOptions extends StatelessWidget {
                               width: 1,
                             )),
                         child: const Icon(
-                          Icons.send_sharp,
+                          Icons.web,
                           color: kudaColor,
                           size: 14,
                         ),
@@ -386,7 +405,7 @@ class PaymentOptions extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Send Money',
+                            'Web Payment',
                             style: TextStyle(
                                 color: kudaColor,
                                 fontWeight: FontWeight.bold,
@@ -395,7 +414,7 @@ class PaymentOptions extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.only(top: 3),
                             child: Text(
-                              'Free transfers to all banks',
+                              'Pay online without your card',
                               style: TextStyle(
                                   color: Colors.grey.shade400, fontSize: 12),
                             ),
@@ -404,7 +423,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 70),
+                      padding: const EdgeInsets.only(left: 60),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -426,7 +445,7 @@ class PaymentOptions extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 4),
           child: Container(
-            height: 65,
+            height: 68,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: Colors.white,
@@ -457,19 +476,19 @@ class PaymentOptions extends StatelessWidget {
                               width: 1,
                             )),
                         child: const Icon(
-                          Icons.send_sharp,
+                          Icons.calculate_outlined,
                           color: kudaColor,
                           size: 14,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 12, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(20, 6, 0, 0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Send Money',
+                            'ATM & POS Payments',
                             style: TextStyle(
                                 color: kudaColor,
                                 fontWeight: FontWeight.bold,
@@ -477,8 +496,10 @@ class PaymentOptions extends StatelessWidget {
                           ),
                           Container(
                             padding: const EdgeInsets.only(top: 3),
+                            height: 28,
+                            width: 180,
                             child: Text(
-                              'Free transfers to all banks',
+                              'Get cash or pay on a POS with no card',
                               style: TextStyle(
                                   color: Colors.grey.shade400, fontSize: 12),
                             ),
@@ -487,7 +508,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 70),
+                      padding: const EdgeInsets.only(left: 30),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -506,6 +527,33 @@ class PaymentOptions extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(height: 35),
+        Container(
+            child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Send to Beneficiary',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.black),
+            ),
+            Container(
+              height: 25,
+              width: 65,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5), color: kudaColor),
+              child: Center(
+                child: Text('View All',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 11,
+                    )),
+              ),
+            ),
+          ],
+        )),
       ],
     );
   }

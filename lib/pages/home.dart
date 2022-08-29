@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
     });
   }
 
-  final List<Widget> _pages = const [
+  final List<Widget> _pages = [
     HomePage(),
     PaymentsPage(),
     BudgetPage(),
