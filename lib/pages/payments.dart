@@ -57,7 +57,6 @@ class _PaymentsPageState extends State<PaymentsPage> {
 
   final List beneficiaries = [
     ['Johnson Smith', 'Kuda', 123209987, '⭐'],
-    ['Kenneth Nworie', 'Stanbic IBTC', 00349982, ' '],
     ['Agnes Okoro', 'WEMA', 222399033, '⭐'],
     ['Joy Dike', 'First Bank', 10000209987, '⭐'],
     ['Pauline Emmanuel', 'Access Bank', 000099551, '⭐'],
@@ -73,7 +72,10 @@ class _PaymentsPageState extends State<PaymentsPage> {
           padding: EdgeInsets.symmetric(vertical: 2),
           child: Text(
             'Payments',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 17,
+            ),
           ),
         ),
         backgroundColor: Colors.white,
@@ -107,7 +109,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
                   ),
                 ],
               ),
-              Container(
+              SizedBox(
                 height: 100,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
@@ -120,7 +122,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
                     })),
               ),
               const PaymentOptions(),
-              Container(
+              SizedBox(
                 height: 340,
                 child: ListView.builder(
                   itemCount: beneficiaries.length,

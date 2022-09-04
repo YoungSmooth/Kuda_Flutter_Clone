@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_initicon/flutter_initicon.dart';
-import 'package:flutter_randomcolor/flutter_randomcolor.dart';
 import 'package:kuda/pages/colors/colors.dart';
 
 class PaymentBeneficiaries extends StatelessWidget {
@@ -18,7 +17,7 @@ class PaymentBeneficiaries extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,7 +72,7 @@ class PaymentBeneficiaries extends StatelessWidget {
           ]),
           Text(
             beneficiaryRating,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 20,
             ),
           ),

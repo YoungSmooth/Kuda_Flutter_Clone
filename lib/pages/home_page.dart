@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                         child: CircleAvatar(
                           radius: 17,
                           backgroundImage: NetworkImage(
-                            'https://i.pinimg.com/564x/fd/3a/41/fd3a41fe902856e6cf87e902118d32a4.jpg',
+                            'https://media-exp1.licdn.com/dms/image/C4E03AQGosfbZKXMacA/profile-displayphoto-shrink_400_400/0/1625215911529?e=1667433600&v=beta&t=_S7qK4Y8xb4qsOWZBxz1f7TSV5rx-EY0xlIAVKYyGbI',
                           ),
                         ),
                       ),
@@ -178,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                     const Padding(
                       padding: EdgeInsets.only(top: 11),
                       child: Text(
-                        '₦92,000,000.00',
+                        '₦850,000,000.00',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 33,
@@ -301,9 +301,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(
-              height: 1,
+              height: 2,
             ),
-            Container(
+            SizedBox(
               height: 295,
               child: ListView.builder(
                 scrollDirection: Axis.vertical,

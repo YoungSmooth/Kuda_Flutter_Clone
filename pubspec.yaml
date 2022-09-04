@@ -39,6 +39,7 @@ dependencies:
   flutter_initicon:
   font_awesome_flutter:
   dotted_border:
+  smooth_page_indicator:
 
 dev_dependencies:
   flutter_test:

@@ -72,7 +72,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 70),
+                      padding: const EdgeInsets.fromLTRB(75, 13, 0, 0),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -155,7 +155,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 68),
+                      padding: const EdgeInsets.fromLTRB(70, 13, 0, 0),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -238,7 +238,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 62),
+                      padding: const EdgeInsets.fromLTRB(63, 13, 0, 0),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -321,7 +321,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 35.0),
+                      padding: const EdgeInsets.fromLTRB(35, 15, 0, 0),
                       child: Container(
                         height: 18,
                         width: 42,
@@ -340,7 +340,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 12),
+                      padding: const EdgeInsets.fromLTRB(12, 15, 0, 0),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -423,7 +423,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 60),
+                      padding: const EdgeInsets.fromLTRB(60, 13, 0, 0),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -508,7 +508,7 @@ class PaymentOptions extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 30),
+                      padding: const EdgeInsets.fromLTRB(30, 13, 0, 0),
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
@@ -527,12 +527,11 @@ class PaymentOptions extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 35),
-        Container(
-            child: Row(
+        const SizedBox(height: 35),
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               'Send to Beneficiary',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -544,7 +543,7 @@ class PaymentOptions extends StatelessWidget {
               width: 65,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5), color: kudaColor),
-              child: Center(
+              child: const Center(
                 child: Text('View All',
                     style: TextStyle(
                       color: Colors.white,
@@ -553,7 +552,7 @@ class PaymentOptions extends StatelessWidget {
               ),
             ),
           ],
-        )),
+        ),
       ],
     );
   }

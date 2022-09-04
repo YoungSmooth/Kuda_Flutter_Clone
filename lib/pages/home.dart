@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:kuda/Pages/colors/colors.dart';
 import 'package:kuda/pages/budgets.dart';
 import 'package:kuda/pages/cards.dart';
@@ -21,7 +22,7 @@ class _HomeState extends State<Home> {
     });
   }
 
-  final List<Widget> _pages = [
+  final List<Widget> _pages = const [
     HomePage(),
     PaymentsPage(),
     BudgetPage(),
@@ -38,7 +39,7 @@ class _HomeState extends State<Home> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentTab,
         selectedItemColor: kudaColor,
-        iconSize: 25,
+        iconSize: 23,
         unselectedLabelStyle: const TextStyle(fontSize: 8),
         selectedLabelStyle: const TextStyle(fontSize: 8),
         showSelectedLabels: true,
@@ -47,20 +48,28 @@ class _HomeState extends State<Home> {
         items: const [
           BottomNavigationBarItem(
             backgroundColor: kudaLight,
-            icon: Icon(
-              Icons.home,
+            icon: FaIcon(
+              FontAwesomeIcons.house,
+              size: 22,
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.telegram,
+            icon: FaIcon(
+              FontAwesomeIcons.paperPlane,
+              size: 22,
+            ),
+            activeIcon: FaIcon(
+              FontAwesomeIcons.solidPaperPlane,
+              size: 20,
             ),
             label: 'Payments',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.auto_graph,
+            icon: Icon(Icons.pie_chart_outline),
+            activeIcon: FaIcon(
+              FontAwesomeIcons.chartPie,
+              size: 22,
             ),
             label: 'Budget',
           ),
@@ -68,12 +77,15 @@ class _HomeState extends State<Home> {
             icon: Icon(
               Icons.payment,
             ),
+            activeIcon: FaIcon(
+              FontAwesomeIcons.creditCard,
+              size: 22,
+            ),
             label: 'Cards',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.more,
-            ),
+            icon: FaIcon(FontAwesomeIcons.buromobelexperte),
+            activeIcon: FaIcon(FontAwesomeIcons.braille),
             label: 'More',
           ),
         ],
